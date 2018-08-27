@@ -1,4 +1,4 @@
-### `Setup`
+### Setup
 
 Before running the app you'll need a Github API token. Once made run the following command (or add it to your bash profile and reload)
 
