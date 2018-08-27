@@ -15,8 +15,8 @@ const RepoCard = ({repo}) => (
         </Row>
         < Row around = "xs" >
             <Col><i className="fa fa-circle" aria-hidden="true">{repo.primaryLanguage.name}</i></Col>
-            <Col><i className="fa fa-code-fork" aria-hidden="true"></i>{repo.forkCount}</Col >
-            <Col><i className="fa fa-question-circle-o" aria-hidden="true"></i>{repo.issues.totalCount}</Col>
+            <Col><i className="fa fa-code-fork" aria-hidden="true">{repo.forkCount}</i></Col >
+            <Col><i className="fa fa-question-circle-o" aria-hidden="true">{repo.issues.totalCount}</i></Col>
         </Row>            
     </div>
     

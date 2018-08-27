@@ -40,7 +40,7 @@ export default class RepoCardLists extends Component {
         const {fetchingRepo, repos, fetchRepoErro} = this.state;
         var element;
         if(fetchingRepo){
-          element = <span>Fetching Repos</span>
+          element = <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
         }else if(fetchRepoErro){
           element = <span>{fetchRepoErro}</span>
         }else{
