@@ -35,7 +35,7 @@ const repo_query = `query {
         issues(states: OPEN) {
             totalCount
         },
-        homepageUrl,
+        url,
         forkCount,
     }
 `
