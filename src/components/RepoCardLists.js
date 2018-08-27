@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import apolloClient from '../helpers/apollo_client';
-import repo_query from '../helpers/repo_query'
-
+import repo_query from '../helpers/repo_query';
+import RepoCard from './RepoCard';
+import { Row, Col} from 'react-flexbox-grid'
 const gql = require('graphql-tag');
 
 export default class RepoCardLists extends Component {
@@ -36,9 +37,24 @@ export default class RepoCardLists extends Component {
     };
 
     render() {
-      return (
-        <div>hello world</div>
-      )
+        const {fetchingRepo, repos, fetchRepoErro} = this.state;
+        var element;
+        if(fetchingRepo){
+          element = <span>Fetching Repos</span>
+        }else if(fetchRepoErro){
+          element = <span>{fetchRepoErro}</span>
+        }else{
+          element = <Row>
+            {repos.map((repo, index) => {
+              return <Col xs={12} sm={12} lg={4} md={6} key={index}><RepoCard repo={repo}/> </Col>
+            })}
+          </Row>
+            
+        }
+        return (
+          element
+        )
+
     }
 
 

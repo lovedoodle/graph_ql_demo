@@ -1,0 +1,22 @@
+.repo-card {
+    border: 1px solid #333;
+    height: 200px;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+.repo-header {
+    height: 160px;
+}
+.repo-avatar-container {
+    display: inline-block;
+}
+.repo-intro {
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    border-radius: 50%;
+}
